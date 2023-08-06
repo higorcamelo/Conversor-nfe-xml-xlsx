@@ -5,11 +5,9 @@ import os
 lista_arquivos = []
 
 def has_xml_files(folder_path):
-    for filename in os.listdir(folder_path):
-        lista_arquivos.append(filename)
-        if filename.lower().endswith(".xml"):
-            return True
-    return False
+    xml_files = [filename for filename in os.listdir(folder_path) if filename.lower().endswith(".xml")]
+    lista_arquivos.extend(xml_files)
+    return len(xml_files) > 0
 
 layout = [
     [sg.Text("Digite o caminho da pasta:")],
@@ -29,10 +27,11 @@ while True:
         folder_path = values["-FOLDER-"]
         if folder_path:
             if has_xml_files(folder_path):
-                conversor.get_infos(folder_path)
+                for xml_file in lista_arquivos:
+                    arquivo_path = os.path.join(folder_path, xml_file)
+                    conversor.get_infos(arquivo_path)
                 window["-MESSAGE-"].update(f"Arquivos XML encontrados na pasta! {lista_arquivos}")
             else:
-                conversor.get_infos(folder_path)
                 window["-MESSAGE-"].update("Nenhum arquivo XML na pasta.")
 
 window.close()
