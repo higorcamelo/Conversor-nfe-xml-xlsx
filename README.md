@@ -23,12 +23,8 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
 - **PySimpleGUI**: Biblioteca para criar interfaces gráficas de usuário (GUI) de forma rápida e intuitiva.
 - **xmltodict**: Biblioteca para análise de arquivos XML de forma mais conveniente.
 - **pandas**: Biblioteca para manipulação e análise de dados, utilizada para criar a planilha Excel.
+- **openpyxl**: Biblioteca para trabalhar com arquivos Excel.
 - **cx-Freeze**: Ferramenta utilizada para empacotar o código Python em um executável (.exe).
-
-
-## Contribuição
-
-Contribuições são bem-vindas! Se você deseja adicionar novas funcionalidades, melhorias ou correções, sinta-se à vontade para criar um pull request.
 
 ## Licença
 
