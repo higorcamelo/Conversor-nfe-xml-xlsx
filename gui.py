@@ -36,16 +36,16 @@ while True:
             if has_xml_files(folder_path):
                 window["-MESSAGE-"].update("Processando arquivos XML...", text_color="blue")
                 progress_bar = window["-PROGRESS-"]
-                progress_bar.update_bar(0, 1)
-                
+                progress_bar.update(0, len(lista_arquivos))
+
                 def process_xml_files():
                     for xml_file in lista_arquivos:
                         arquivo_path = os.path.join(folder_path, xml_file)
                         conversor.get_infos(arquivo_path)
-                        progress_bar.update_bar(lista_arquivos.index(xml_file) + 1, len(lista_arquivos))
-                    
+                        progress_bar.update(lista_arquivos.index(xml_file) + 1)
+
                     conversor.criar_tabela()
-                    window["-MESSAGE-"].update("Arquivos XML processados com sucesso!", text_color="green")
+                    window["-MESSAGE-"].update("Arquivos XML processados com sucesso!", text_color="#32CD32")
 
                 thread = threading.Thread(target=process_xml_files)
                 thread.start()
