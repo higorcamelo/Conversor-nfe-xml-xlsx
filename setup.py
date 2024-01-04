@@ -2,7 +2,7 @@ import sys
 from cx_Freeze import setup, Executable
 
 build_exe_options = {
-    "packages": ["xmltodict", "pandas", "PySimpleGUI"],
+    "packages": ["xmltodict", "pandas", "PySimpleGUI", "numpy"],
     "includes": ["conversor"],
     "excludes": [],
 }
@@ -16,5 +16,5 @@ setup(
     version="1.0",
     description="Converte NF-e XML em planilha Excel",
     options={"build_exe": build_exe_options},
-    executables=[Executable("gui.py", base=base)]
+    executables=[Executable("Conversor.py", base=base)]
 )
