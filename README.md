@@ -7,13 +7,20 @@ Este é um sistema simples desenvolvido em Python que permite a conversão dos p
 - Processa arquivos XML de NF-e para extrair informações relevantes.
 - Gera uma planilha Excel contendo os valores extraídos.
 - Oferece uma interface gráfica de usuário (GUI) para facilitar a interação.
- 
-## Recursos Adicionais
-
 - Tratamento de erros detalhado com registro em arquivo de log (`errors.log`).
 - Feedback visual na interface para melhor compreensão do progresso.
 - Barra de progresso para indicar o andamento do processamento.
 - Responsividade da interface permitindo redimensionamento da janela.
+
+## Recursos Adicionais
+
+Após a refatoração do código, foram realizadas as seguintes melhorias:
+
+- Modularidade aprimorada e organização do código para facilitar a manutenção.
+- Tratamento de erros expandido para cobrir casos adicionais, como quando nenhum arquivo XML é encontrado na pasta selecionada.
+- Feedback visual na interface durante o processamento dos arquivos XML, fornecendo informações sobre o progresso atual.
+- Utilização da biblioteca `openpyxl` para manipular arquivos Excel, oferecendo mais recursos e flexibilidade.
+- Atualização da lista de bibliotecas utilizadas para incluir as que foram adicionadas ou utilizadas de forma diferente após as alterações no código.
 
 ## Tecnologias e Bibliotecas Utilizadas
 
