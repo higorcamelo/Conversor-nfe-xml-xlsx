@@ -1,0 +1,114 @@
+<NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+    <infNFe Id="NFe12345678901234567890123456789012345678901234" versao="4.00">
+        <ide>
+            <cUF>35</cUF>
+            <cNF>12345678</cNF>
+            <natOp>VENDA DE PRODUTOS</natOp>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>12345</nNF>
+            <dhEmi>2024-01-03T10:00:00-03:00</dhEmi>
+            <tpNF>1</tpNF>
+            <idDest>1</idDest>
+            <cMunFG>3509502</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>1</cDV>
+            <tpAmb>2</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>1</indFinal>
+            <indPres>1</indPres>
+            <procEmi>0</procEmi>
+            <verProc>1.0</verProc>
+        </ide>
+        <emit>
+            <CNPJ>12345678901234</CNPJ>
+            <xNome>Empresa Exemplo LTDA</xNome>
+            <xFant>Empresa Exemplo</xFant>
+            <enderEmit>
+                <xLgr>Rua Exemplo</xLgr>
+                <nro>123</nro>
+                <xBairro>Centro</xBairro>
+                <cMun>3509502</cMun>
+                <xMun>São Paulo</xMun>
+                <UF>SP</UF>
+                <CEP>12345678</CEP>
+                <cPais>1058</cPais>
+                <xPais>BRASIL</xPais>
+            </enderEmit>
+            <IE>123456789012</IE>
+        </emit>
+        <dest>
+            <CNPJ>12345678901234</CNPJ>
+            <xNome>Cliente Exemplo</xNome>
+            <enderDest>
+                <xLgr>Rua Cliente Exemplo</xLgr>
+                <nro>456</nro>
+                <xBairro>Jardim Exemplo</xBairro>
+                <cMun>3509502</cMun>
+                <xMun>São Paulo</xMun>
+                <UF>SP</UF>
+                <CEP>87654321</CEP>
+                <cPais>1058</cPais>
+                <xPais>BRASIL</xPais>
+            </enderDest>
+        </dest>
+        <det nItem="1">
+            <prod>
+                <cProd>001</cProd>
+                <xProd>Produto Exemplo 1</xProd>
+                <CFOP>5102</CFOP>
+                <uCom>UN</uCom>
+                <qCom>10.00</qCom>
+                <vUnCom>5.00</vUnCom>
+                <vProd>50.00</vProd>
+                <cEAN>7891234567890</cEAN>
+                <NCM>12345678</NCM>
+                <CEST>1234567</CEST>
+            </prod>
+            <imposto>
+                <ICMS>
+                    <ICMS00>
+                        <orig>0</orig>
+                        <CST>00</CST>
+                        <vBC>50.00</vBC>
+                        <pICMS>18.00</pICMS>
+                        <vICMS>9.00</vICMS>
+                    </ICMS00>
+                </ICMS>
+                <PIS>
+                    <PISAliq>
+                        <CST>01</CST>
+                        <vBC>50.00</vBC>
+                        <pPIS>1.65</pPIS>
+                        <vPIS>0.83</vPIS>
+                    </PISAliq>
+                </PIS>
+                <COFINS>
+                    <COFINSAliq>
+                        <CST>01</CST>
+                        <vBC>50.00</vBC>
+                        <pCOFINS>7.60</pCOFINS>
+                        <vCOFINS>3.80</vCOFINS>
+                    </COFINSAliq>
+                </COFINS>
+            </imposto>
+        </det>
+        <total>
+            <ICMSTot>
+                <vBC>50.00</vBC>
+                <vICMS>9.00</vICMS>
+                <vProd>50.00</vProd>
+                <vPIS>0.83</vPIS>
+                <vCOFINS>3.80</vCOFINS>
+                <vNF>57.63</vNF>
+            </ICMSTot>
+        </total>
+        <transp>
+            <modFrete>0</modFrete>
+        </transp>
+        <infAdic>
+            <infCpl>Informações adicionais sobre a venda.</infCpl>
+        </infAdic>
+    </infNFe>
+</NFe>

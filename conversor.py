@@ -51,17 +51,18 @@ def get_infos(arquivo):
 
 valores_cell = []
 
-def criar_tabela():
+def criar_tabela(nome_arquivo=None):
     colunas = ['Nº Nota', 'Emissor', 'Destinatário', 'Logradouro', 'Cidade', 'Val. Produto',
                'Val. ICMS', 'Val. PIS', 'Val. COFINS', 'Peso Bruto']
 
     tabela = pd.DataFrame(columns=colunas, data=valores_cell)
-    nome_arquivo = 'notas_fiscais.xlsx'
+    if nome_arquivo is None:
+        nome_arquivo = 'notas_fiscais.xlsx'
     
     num_arquivo = 1
     while os.path.isfile(nome_arquivo):
         num_arquivo += 1
         nome_arquivo = f'notas_fiscais_{num_arquivo}.xlsx'
 
-    tabela.to_excel(nome_arquivo, index=False)
+    tabela.to_excel(nome_arquivo + '.xlsx',  engine='openpyxl', index=False)
     print(f"Arquivo {nome_arquivo} criado com sucesso!")
